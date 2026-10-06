@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üzgünüm Sare 😢</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; min-height:100vh; padding:20px;
+  display:flex; justify-content:center; align-items:center;
+  font-family:Arial,Helvetica,sans-serif; color:#fff;
+  background:
+    radial-gradient(circle at 15% 15%,rgba(255,180,220,.35),transparent 28%),
+    radial-gradient(circle at 85% 80%,rgba(180,130,220,.28),transparent 30%),
+    linear-gradient(135deg,#25192f,#492344,#171521);
+  overflow-x:hidden;
+}
+.bg-heart{position:fixed;opacity:.10;font-size:100px;pointer-events:none;animation:float 6s ease-in-out infinite}
+.h1{left:3%;top:7%}.h2{right:4%;bottom:7%;animation-delay:2s}.h3{right:25%;top:4%;font-size:55px;animation-delay:1s}
+.card{
+  width:min(780px,100%); min-height:590px; padding:30px 26px 25px;
+  border-radius:32px; text-align:center;
+  background:rgba(25,17,34,.84); border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 25px 90px rgba(0,0,0,.45); backdrop-filter:blur(15px);
+}
+.emoji{font-size:50px;margin-top:2px}
+h1{font-size:clamp(31px,7vw,54px);margin:3px 0 7px}
+.subtitle{color:#d8c9dc;margin-bottom:22px}
+.page{display:none;animation:in .42s ease}
+.page.active{display:block}
+.text{
+  text-align:left; font-size:17px; line-height:1.82;
+  color:#f7eef8; max-width:675px; margin:auto;
+}
+.text p{margin:0 0 16px}
+.highlight{
+  margin:21px 0; padding:17px 19px; text-align:left;
+  border-left:4px solid #e6a5cc; border-radius:0 17px 17px 0;
+  background:rgba(255,255,255,.075); color:#ffeafa;
+}
+.quote{text-align:center;font-size:19px;font-weight:bold}
+.progress{display:flex;justify-content:center;gap:7px;margin:20px 0 15px}
+.dot{width:8px;height:8px;border-radius:50%;background:#655669}
+.dot.active{width:11px;height:11px;background:#e8a4ca}
+button{
+  border:0;border-radius:17px;padding:14px 25px;margin:4px;
+  font-size:15px;font-weight:bold;color:white;
+  background:linear-gradient(135deg,#99538d,#d879ad);
+  cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,.22);
+  transition:.2s;
+}
+button:hover{transform:translateY(-3px)}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.choice{position:relative;
+  min-height:76px; text-align:left; padding:17px;
+  background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;color:#fff;box-shadow:none;
+}
+.choice:hover{background:rgba(255,255,255,.13)}
+.choice b{display:block;font-size:16px;margin-bottom:5px}
+.choice span{font-size:13px;color:#d8cbdc;font-weight:normal}
+.answer{
+  display:none;margin:20px auto 0;padding:20px;border-radius:20px;
+  background:rgba(232,164,202,.12);border:1px solid rgba(232,164,202,.25);
+  line-height:1.65;color:#fff;max-width:650px;
+}
+.note{font-size:13px;color:#bfb2c4;margin-top:16px}
+@keyframes in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-18px) rotate(8deg)}}
+@media(max-width:600px){.card{padding:27px 18px}.text{font-size:16px}.choices{grid-template-columns:1fr}.choice{position:relative;min-height:70px}}
+</style>
+</head>
+<body>
+<div class="bg-heart h1">♡</div><div class="bg-heart h2">♡</div><div class="bg-heart h3">♡</div>
+
+<main class="card">
+
+<section class="page active">
+  <div class="emoji">😢</div>
+  <h1>Üzgünüm</h1>
+  <div class="subtitle">Sana söylemek istediğim birkaç şey var...</div>
+  <div class="text">
+    <p>Bu sayfayı hazırlamamın amacı seni bir şeye zorlamak değil. Sadece normal bir mesajla anlatmakta zorlandığım şeyleri biraz daha düzgün anlatabilmek.</p>
+    <p>Bir süredir aramızın eskisi gibi olmadığını hissediyorum. En zor tarafı da ortada büyük bir kavga ya da tek bir sebep olmaması.</p>
+    <p>Bazen düşünüyorum, belki ikimiz de fark etmeden uzaklaştık. Ama ben bu uzaklığı görünce gerçekten üzülüyorum.</p>
+  </div>
+  <div class="highlight quote">“Ben eskisi gibi olmak istiyorum.”</div>
+  <div class="progress"><i class="dot active"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+  <button onclick="next()">Devam →</button>
+</section>
+
+<section class="page">
+  <div class="emoji">😓</div>
+  <h1>Her zaman düşünüyorum</h1>
+  <div class="text">
+    <p><strong>Her zaman nerede yanlış yaptım onu düşünüyorum.</strong></p>
+    <p>Konuşmalarımızı, söylediğim şeyleri, yaptığım şeyleri düşünüyorum. Bazen “Keşke şunu farklı yapsaydım” diyorum.</p>
+    <p>Ama sonra bunun sadece benim hatam olduğunu söylemenin de doğru olmadığını düşünüyorum. Çünkü iki insan arasındaki şeyleri tek bir kişinin belirlemesi mümkün değil.</p>
+    <p>Belki senin içinde benim bilmediğim şeyler var. Belki sen de bazı şeyleri farklı düşünüyorsun. O yüzden seni suçlamak istemiyorum.</p>
+  </div>
+  <div class="highlight">😐 Ben sadece ne olduğunu gerçekten anlamak istiyorum.</div>
+  <div class="progress"><i class="dot"></i><i class="dot active"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+  <button onclick="next()">Devam →</button>
+</section>
+
+<section class="page">
+  <div class="emoji">😿</div>
+  <h1>Eskiden...</h1>
+  <div class="text">
+    <p>Eskiden seninle konuştuğumda daha farklı hissediyordum. Mutluydum ve senin de mutlu olduğunu düşünüyordum.</p>
+    <p>Şimdi ise bazen ne düşündüğünü anlayamıyorum. Bu belirsizlik beni diğer her şeyden daha çok düşündürüyor.</p>
+    <p>“Acaba artık beni istemiyor mu?”, “Acaba başka bir şey mi oldu?” gibi düşünceler geliyor aklıma.</p>
+    <p>Hatta bazen “Belki kendine yeni birini buldun” diye bile düşünüyorum. Bunu seni suçlamak için söylemiyorum; sadece kafamdan geçenleri dürüstçe anlatıyorum.</p>
+  </div>
+  <div class="highlight">Eğer durum benim düşündüğümden tamamen farklıysa, bunu da bilmek isterim.</div>
+  <div class="progress"><i class="dot"></i><i class="dot"></i><i class="dot active"></i><i class="dot"></i><i class="dot"></i></div>
+  <button onclick="next()">Devam →</button>
+</section>
+
+<section class="page">
+  <div class="emoji">🥲</div>
+  <h1>“Yeniden başlayabilir miyiz?”</h1>
+  <div class="text">
+    <p>Sana bunu sorduğumda “bilmiyorum” dedin. Açıkçası biraz üzüldüm çünkü içimde hâlâ yeniden güzel konuşabileceğimize dair bir umut var.</p>
+    <p>Ama senin ne hissettiğini bilmeden senden “evet” demeni istemiyorum.</p>
+    <p>Belki hemen yeniden başlamak istemiyorsun. Belki biraz zaman istiyorsun. Belki de sadece eskisi gibi konuşmaya başlamayı istiyorsun.</p>
+    <p>Hangisi olduğunu benim senin yerine seçmem doğru olmaz.</p>
+  </div>
+  <div class="highlight quote">😢😓😐😿🥲<br>Benim için önemli olan, ikimizin de gerçekten ne istediğini anlayabilmesi.</div>
+  <div class="progress"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot active"></i><i class="dot"></i></div>
+  <button onclick="next()">Devam →</button>
+</section>
+
+<section class="page">
+  <div class="emoji">💭</div>
+  <h1>Sen ne düşünüyorsun?</h1>
+  <div class="subtitle">Bir şık seçtiğinde cevabı hemen altında görünecek. ❤️</div>
+  <div class="text">
+    <p>İstersen aşağıdakilerden sana en yakın olanı seçebilirsin. Hiçbiri seni zorlamak için değil. Sadece ne hissettiğini anlatmanın daha kolay olması için.</p>
+  </div>
+
+  <div class="choices">
+    <button class="choice" onclick="answer('yeniden')"><b>❤️ Yeniden başlayabiliriz</b><span>Ben de aramızın düzelmesini istiyorum.</span></button>
+    <button class="choice" onclick="answer('zaman')"><b>⏳ Biraz zamana ihtiyacım var</b><span>Şu an karar vermeye hazır değilim.</span></button>
+    <button class="choice" onclick="answer('konus')"><b>💬 Önce konuşalım</b><span>Her şeyi sakin sakin konuşmak istiyorum.</span></button>
+    <button class="choice" onclick="answer('emin')"><b>😐 Hâlâ emin değilim</b><span>Ne hissettiğimi anlamaya çalışıyorum.</span></button>
+    <button class="choice" onclick="answer('istemiyorum')"><b>🤍 Şu an istemiyorum</b><span>Bunu dürüstçe söylemek istiyorum.</span></button>
+    <button class="choice" onclick="answer('sen')"><b>💭 Sen anlat</b><span>Önce senin ne hissettiğini duymak istiyorum.</span></button>
+  </div>
+  <div id="answer" class="answer"></div>
+  <div class="progress"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot active"></i></div>
+  <div class="note">Ne seçersen seç, seni suçlamıyorum. Sadece dürüst olmanı istiyorum. ♡</div>
+</section>
+
+</main>
+
+<script>
+let current=0;
+const pages=document.querySelectorAll('.page');
+function next(){
+  pages[current].classList.remove('active');
+  current=Math.min(current+1,pages.length-1);
+  pages[current].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function answer(type){
+  const box=document.getElementById("answer");
+  const messages={
+    yeniden:"❤️ Bunu duymak beni gerçekten mutlu ederdi. Ben de her şeyin bir anda mükemmel olmasını beklemiyorum. Sadece yeniden konuşmaya, birbirimizi anlamaya ve güzel şeyleri yavaş yavaş geri getirmeye çalışabiliriz. Bu kez ikimizin de ne istediğini bilerek ilerleyelim.",
+    zaman:"⏳ Tamam, buna saygı duyarım. Seni hemen karar vermeye zorlamak istemiyorum. Düşünmek için zamana ihtiyacın varsa bunu anlayabilirim. Aceleyle söylenmiş bir cevaptansa, gerçekten içinden gelen cevabı duymayı tercih ederim.",
+    konus:"💬 Bence de önce konuşmak en doğrusu. Ne olduğunu birbirimizi suçlamadan konuşabiliriz. Ben kendi hissettiklerimi anlatırım, sen de kendi tarafından anlatırsın. Belki benim yanlış anladığım şeyler vardır; en azından birbirimizi gerçekten dinlemiş oluruz.",
+    emin:"😐 Emin olmamanı anlayabilirim. Her şeyi hemen netleştirmek zorunda değilsin. Bazen insan ne istediğini anlamak için zamana ihtiyaç duyar. Ben senden beni üzmemek için bir cevap vermeni istemiyorum; gerçekten ne hissediyorsan onu bilmek istiyorum.",
+    istemiyorum:"🤍 Bunu duymak beni üzebilir ama dürüst olmanı tercih ederim. Seni istemediğin bir şeye ikna etmeye çalışmayacağım. Bir şeyin güzel olması için iki kişinin de gerçekten istemesi gerekiyor. Benim hislerim gerçek olabilir ama senin hislerine de saygı duymam gerekiyor.",
+    sen:"💭 Benim hissettiğim şu: Seni önemsiyorum ve aramızın düzelmesini istiyorum. Ama bunun sadece benim istediğim şekilde olmasını istemiyorum. Nerede yanlış yaptığımı bilmek, senin ne hissettiğini anlamak ve mümkünse bazı şeyleri birlikte düzeltmek istiyorum. Mümkün değilse bile bunu dürüstçe bilmek, belirsizlikte kalmaktan daha iyi."
+  };
+  box.textContent=messages[type] || "";
+  box.style.display="block";
+  box.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+</script>
+</body>
+</html>
